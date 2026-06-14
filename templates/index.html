@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flashcard App</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+
+    <!-- Home Screen: Deck List -->
+    <div id="home-screen">
+        <h1>Flashcard App</h1>
+        <div id="deck-list"></div>
+        <div id="create-deck">
+            <input type="text" id="new-deck-name" placeholder="New deck name..." />
+            <button onclick="createDeck()">Create Deck</button>
+        </div>
+    </div>
+
+    <!-- Deck Screen: View Cards -->
+    <div id="deck-screen" class="hidden">
+        <button onclick="showHome()">← Back</button>
+        <h2 id="deck-title"></h2>
+        <button onclick="showQuiz()">Start Quiz</button>
+        <div id="card-list"></div>
+        <div id="add-card">
+            <input type="text" id="new-question" placeholder="Question..." />
+            <input type="text" id="new-answer" placeholder="Answer..." />
+            <button onclick="addCard()">Add Card</button>
+        </div>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="hidden">
+        <button onclick="showDeck()">← Back</button>
+        <h2>Quiz: <span id="quiz-deck-title"></span></h2>
+        <div id="quiz-card">
+            <div id="question-text"></div>
+            <button onclick="flipCard()">Flip</button>
+            <div id="answer-text" class="hidden"></div>
+            <div id="quiz-buttons" class="hidden">
+                <button onclick="submitResult(true)">✅ Got it</button>
+                <button onclick="submitResult(false)">❌ Missed it</button>
+            </div>
+        </div>
+        <div id="quiz-complete" class="hidden">
+            <h3>Quiz Complete!</h3>
+            <button onclick="showDeck()">Back to Deck</button>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
