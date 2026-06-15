@@ -265,7 +265,6 @@ function selectOption(index) {
         quizIndex++;
         showQuestion();
     } else {
-        // Learning mode — highlight correct/incorrect, wait for nav buttons
         for (let i = 0; i < 3; i++) {
             const b = document.getElementById(`option-${i}`);
             b.disabled = true;

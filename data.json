@@ -759,6 +759,616 @@
         "answer": "A technique that adds a penalty to the loss function to reduce overfitting by discouraging complex models",
         "difficulty": 1
       }
+    ],
+    "D.E. Shaw | Software Engineer": [
+      {
+        "id": "des1",
+        "question": "What is the time complexity of finding the largest product of three numbers in an array?",
+        "answer": "O(n) — sort or use a single pass tracking the three largest and two smallest values",
+        "difficulty": 1
+      },
+      {
+        "id": "des2",
+        "question": "What is dynamic programming and when should you use it?",
+        "answer": "Breaking a problem into overlapping subproblems and caching results. Use it when a problem has optimal substructure and overlapping subproblems",
+        "difficulty": 1
+      },
+      {
+        "id": "des3",
+        "question": "What is a DP on graph problem?",
+        "answer": "A problem that combines graph traversal with dynamic programming, such as finding the longest path in a DAG or shortest path with constraints",
+        "difficulty": 1
+      },
+      {
+        "id": "des4",
+        "question": "What is a REST API?",
+        "answer": "An API that uses HTTP methods (GET, POST, PUT, DELETE) and stateless communication to transfer data between client and server",
+        "difficulty": 1
+      },
+      {
+        "id": "des5",
+        "question": "What is concurrency and what problems can it cause?",
+        "answer": "Concurrency is multiple tasks executing overlapping in time. Problems include race conditions, deadlocks, and starvation",
+        "difficulty": 1
+      },
+      {
+        "id": "des6",
+        "question": "What is a deadlock?",
+        "answer": "A situation where two or more threads are each waiting for the other to release a resource, causing all to be stuck indefinitely",
+        "difficulty": 1
+      },
+      {
+        "id": "des7",
+        "question": "What is a race condition?",
+        "answer": "When two threads access shared data simultaneously and the outcome depends on the order of execution",
+        "difficulty": 1
+      },
+      {
+        "id": "des8",
+        "question": "What is a mutex?",
+        "answer": "A mutual exclusion lock that prevents multiple threads from accessing a shared resource simultaneously",
+        "difficulty": 1
+      },
+      {
+        "id": "des9",
+        "question": "What is the difference between a process and a thread?",
+        "answer": "A process is an independent program with its own memory. A thread is a unit of execution within a process that shares memory with other threads",
+        "difficulty": 1
+      },
+      {
+        "id": "des10",
+        "question": "What is a SQL JOIN?",
+        "answer": "A SQL operation that combines rows from two or more tables based on a related column",
+        "difficulty": 1
+      },
+      {
+        "id": "des11",
+        "question": "What is the difference between INNER JOIN and LEFT JOIN?",
+        "answer": "INNER JOIN returns only matching rows. LEFT JOIN returns all rows from the left table and matched rows from the right",
+        "difficulty": 1
+      },
+      {
+        "id": "des12",
+        "question": "What is an index in a database and why does it matter?",
+        "answer": "A data structure that speeds up lookups on a column. Without an index, queries do a full table scan which is O(n)",
+        "difficulty": 1
+      },
+      {
+        "id": "des13",
+        "question": "What is the stocks problem in dynamic programming?",
+        "answer": "A classic DP problem where you find the maximum profit from buying and selling stocks given price history and constraints on transactions",
+        "difficulty": 1
+      },
+      {
+        "id": "des14",
+        "question": "What is operating system virtual memory?",
+        "answer": "A memory management technique that gives each process the illusion of having its own large contiguous memory space by mapping virtual addresses to physical addresses",
+        "difficulty": 1
+      },
+      {
+        "id": "des15",
+        "question": "What is a page fault?",
+        "answer": "When a program accesses a memory page not currently in RAM, triggering the OS to load it from disk",
+        "difficulty": 1
+      },
+      {
+        "id": "des16",
+        "question": "What is ACID in databases?",
+        "answer": "Atomicity, Consistency, Isolation, Durability — properties that guarantee database transactions are processed reliably",
+        "difficulty": 1
+      },
+      {
+        "id": "des17",
+        "question": "What is the difference between stack and heap memory?",
+        "answer": "Stack is used for local variables and function calls and is automatically managed. Heap is used for dynamic allocation and must be manually managed",
+        "difficulty": 1
+      },
+      {
+        "id": "des18",
+        "question": "What is a binary search tree?",
+        "answer": "A tree where each node's left subtree contains values less than the node and right subtree contains values greater, enabling O(log n) search",
+        "difficulty": 1
+      },
+      {
+        "id": "des19",
+        "question": "What is the time complexity of quicksort in the worst case?",
+        "answer": "O(n^2) when the pivot is always the smallest or largest element, such as on an already sorted array",
+        "difficulty": 1
+      },
+      {
+        "id": "des20",
+        "question": "What is tail recursion?",
+        "answer": "A recursive function where the recursive call is the last operation, allowing the compiler to optimize it into a loop to avoid stack overflow",
+        "difficulty": 1
+      }
+    ],
+    "D.E. Shaw | Quantitative Analyst": [
+      {
+        "id": "deq1",
+        "question": "What is the probability that 3 random points on a circle are all within the same semicircle?",
+        "answer": "3/4 — fix one point, the other two must each fall within the semicircle starting at that point, giving (1/2)^2 * 3 = 3/4",
+        "difficulty": 1
+      },
+      {
+        "id": "deq2",
+        "question": "What is the Central Limit Theorem?",
+        "answer": "The distribution of the sample mean approaches a normal distribution as sample size increases, regardless of the population distribution",
+        "difficulty": 1
+      },
+      {
+        "id": "deq3",
+        "question": "What is Value at Risk (VaR)?",
+        "answer": "A statistical measure of the maximum potential loss of a portfolio over a given time period at a given confidence level",
+        "difficulty": 1
+      },
+      {
+        "id": "deq4",
+        "question": "What is a derivative in finance?",
+        "answer": "A financial instrument whose value is derived from an underlying asset, index, or rate. Examples include options, futures, and swaps",
+        "difficulty": 1
+      },
+      {
+        "id": "deq5",
+        "question": "What is the difference between a call and put option?",
+        "answer": "A call gives the right to buy an asset at a set price. A put gives the right to sell an asset at a set price",
+        "difficulty": 1
+      },
+      {
+        "id": "deq6",
+        "question": "What is the Black-Scholes model?",
+        "answer": "A mathematical model for pricing European options using variables including stock price, strike price, volatility, time to expiry, and risk-free rate",
+        "difficulty": 1
+      },
+      {
+        "id": "deq7",
+        "question": "What is Bayes theorem?",
+        "answer": "P(A|B) = P(B|A) * P(A) / P(B). It updates the probability of an event given new evidence",
+        "difficulty": 1
+      },
+      {
+        "id": "deq8",
+        "question": "What is the expected value of a fair die roll?",
+        "answer": "3.5 — the average of 1 through 6 is (1+2+3+4+5+6)/6 = 3.5",
+        "difficulty": 1
+      },
+      {
+        "id": "deq9",
+        "question": "What is mean reversion?",
+        "answer": "The tendency of asset prices or returns to revert to their long-term historical average over time",
+        "difficulty": 1
+      },
+      {
+        "id": "deq10",
+        "question": "What is the Sharpe ratio?",
+        "answer": "A measure of risk-adjusted return calculated as (portfolio return minus risk-free rate) divided by portfolio standard deviation",
+        "difficulty": 1
+      },
+      {
+        "id": "deq11",
+        "question": "What is the law of large numbers?",
+        "answer": "As the number of trials increases, the sample mean converges to the expected value",
+        "difficulty": 1
+      },
+      {
+        "id": "deq12",
+        "question": "What is a Monte Carlo simulation?",
+        "answer": "A technique that uses random sampling to model the probability of different outcomes in a process with uncertainty",
+        "difficulty": 1
+      },
+      {
+        "id": "deq13",
+        "question": "What is alpha in finance?",
+        "answer": "The excess return of a portfolio relative to a benchmark, representing the value added by the portfolio manager",
+        "difficulty": 1
+      },
+      {
+        "id": "deq14",
+        "question": "What is beta in finance?",
+        "answer": "A measure of a stock's volatility relative to the market. Beta of 1 means the stock moves with the market",
+        "difficulty": 1
+      },
+      {
+        "id": "deq15",
+        "question": "What is standard deviation and why does it matter in finance?",
+        "answer": "A measure of how spread out returns are from the mean. In finance it represents risk or volatility of an asset",
+        "difficulty": 1
+      },
+      {
+        "id": "deq16",
+        "question": "What is the difference between systematic and unsystematic risk?",
+        "answer": "Systematic risk affects the entire market and cannot be diversified away. Unsystematic risk is company-specific and can be reduced through diversification",
+        "difficulty": 1
+      },
+      {
+        "id": "deq17",
+        "question": "What is covariance and how is it used in portfolio construction?",
+        "answer": "Covariance measures how two assets move together. Low or negative covariance between assets reduces overall portfolio risk",
+        "difficulty": 1
+      },
+      {
+        "id": "deq18",
+        "question": "If you flip a fair coin 1000 times, what theorem describes the probability of getting more than 550 heads?",
+        "answer": "The Central Limit Theorem. The number of heads is approximately normal with mean 500 and standard deviation ~15.8, so 550 is about 3.16 standard deviations above the mean",
+        "difficulty": 1
+      },
+      {
+        "id": "deq19",
+        "question": "What is arbitrage?",
+        "answer": "The simultaneous purchase and sale of the same asset in different markets to profit from a price difference with no risk",
+        "difficulty": 1
+      },
+      {
+        "id": "deq20",
+        "question": "What is a hedge fund and how does D.E. Shaw differ from a traditional hedge fund?",
+        "answer": "A hedge fund pools capital to generate returns. D.E. Shaw is distinguished by its quantitative and computational approach, using mathematical models and algorithms rather than fundamental analysis",
+        "difficulty": 1
+      }
+    ],
+    "Google | Software Engineer": [
+      {
+        "id": "g1",
+        "question": "What is the difference between BFS and DFS and when would you use each?",
+        "answer": "BFS uses a queue and finds shortest paths. DFS uses a stack or recursion and is better for exploring all paths or detecting cycles",
+        "difficulty": 1
+      },
+      {
+        "id": "g2",
+        "question": "How would you design a URL shortener like bit.ly?",
+        "answer": "Use a hash function to generate a short code, store the mapping in a database, and redirect users via a GET request. Consider caching, rate limiting, and expiration",
+        "difficulty": 1
+      },
+      {
+        "id": "g3",
+        "question": "What is Dijkstra's algorithm?",
+        "answer": "A greedy algorithm that finds the shortest path from a source node to all other nodes in a weighted graph with non-negative edges, in O((V+E) log V)",
+        "difficulty": 1
+      },
+      {
+        "id": "g4",
+        "question": "What is the difference between merge sort and quicksort?",
+        "answer": "Merge sort is O(n log n) always and stable but uses extra space. Quicksort is O(n log n) average but O(n^2) worst case and sorts in place",
+        "difficulty": 1
+      },
+      {
+        "id": "g5",
+        "question": "How would you design a distributed messenger system?",
+        "answer": "Use websockets for real-time messaging, a message queue for delivery guarantees, a database for persistence, and horizontal scaling with load balancers",
+        "difficulty": 1
+      },
+      {
+        "id": "g6",
+        "question": "What is the time complexity of searching in a hash map?",
+        "answer": "O(1) average case, O(n) worst case due to hash collisions",
+        "difficulty": 1
+      },
+      {
+        "id": "g7",
+        "question": "What is memoization and how does it differ from tabulation?",
+        "answer": "Memoization is top-down DP that caches recursive results. Tabulation is bottom-up DP that fills a table iteratively. Both avoid recomputation",
+        "difficulty": 1
+      },
+      {
+        "id": "g8",
+        "question": "How would you find the kth largest element in an array?",
+        "answer": "Use a min-heap of size k in O(n log k), or use quickselect for O(n) average time",
+        "difficulty": 1
+      },
+      {
+        "id": "g9",
+        "question": "What is a trie and what is it used for?",
+        "answer": "A tree where each node represents a character. Used for efficient prefix searches, autocomplete, and spell checking in O(m) where m is the word length",
+        "difficulty": 1
+      },
+      {
+        "id": "g10",
+        "question": "How would you detect a cycle in a linked list?",
+        "answer": "Use Floyd's cycle detection algorithm — two pointers moving at different speeds. If they meet, there is a cycle",
+        "difficulty": 1
+      },
+      {
+        "id": "g11",
+        "question": "What is the two pointer technique?",
+        "answer": "Using two indices that move toward each other or in the same direction to solve array problems in O(n) instead of O(n^2)",
+        "difficulty": 1
+      },
+      {
+        "id": "g12",
+        "question": "What is a sliding window algorithm?",
+        "answer": "A technique that maintains a window of elements that slides across an array, useful for problems involving contiguous subarrays or substrings",
+        "difficulty": 1
+      },
+      {
+        "id": "g13",
+        "question": "How would you reverse a linked list?",
+        "answer": "Iteratively use three pointers (prev, current, next) to reverse each link. O(n) time and O(1) space",
+        "difficulty": 1
+      },
+      {
+        "id": "g14",
+        "question": "What is the difference between a stack and a queue?",
+        "answer": "A stack is LIFO — last in first out. A queue is FIFO — first in first out",
+        "difficulty": 1
+      },
+      {
+        "id": "g15",
+        "question": "Tell me about a time you had a disagreement with a teammate. How did you resolve it?",
+        "answer": "Use the STAR method — describe the Situation, Task, Action, and Result. Focus on listening, finding common ground, and reaching a data-driven decision",
+        "difficulty": 1
+      },
+      {
+        "id": "g16",
+        "question": "What is load balancing and why is it important?",
+        "answer": "Distributing incoming requests across multiple servers to prevent any one server from being overwhelmed, improving availability and performance",
+        "difficulty": 1
+      },
+      {
+        "id": "g17",
+        "question": "What is the CAP theorem?",
+        "answer": "A distributed system can only guarantee two of three: Consistency, Availability, and Partition Tolerance",
+        "difficulty": 1
+      },
+      {
+        "id": "g18",
+        "question": "How would you find all anagrams of a string in a list of strings?",
+        "answer": "Sort each string's characters and use a hash map to group strings with the same sorted form. O(n * k log k) where k is string length",
+        "difficulty": 1
+      },
+      {
+        "id": "g19",
+        "question": "What is a heap and what are its common uses?",
+        "answer": "A tree-based data structure satisfying the heap property. Used for priority queues, finding kth largest/smallest elements, and heap sort",
+        "difficulty": 1
+      },
+      {
+        "id": "g20",
+        "question": "How would you check if a binary tree is balanced?",
+        "answer": "Recursively check that the height difference between left and right subtrees of every node is at most 1. O(n) time",
+        "difficulty": 1
+      }
+    ],
+    "Apple | Software Engineer": [
+      {
+        "id": "ap1",
+        "question": "What is the difference between concurrency and parallelism?",
+        "answer": "Concurrency is tasks making progress in overlapping time periods. Parallelism is tasks literally executing at the same instant on multiple cores",
+        "difficulty": 1
+      },
+      {
+        "id": "ap2",
+        "question": "What is memory management in iOS?",
+        "answer": "iOS uses Automatic Reference Counting (ARC) which automatically tracks and manages memory by counting strong references to objects",
+        "difficulty": 1
+      },
+      {
+        "id": "ap3",
+        "question": "What is a retain cycle and how do you fix it?",
+        "answer": "When two objects hold strong references to each other preventing deallocation. Fixed by making one reference weak or unowned",
+        "difficulty": 1
+      },
+      {
+        "id": "ap4",
+        "question": "What is the difference between a struct and a class in Swift?",
+        "answer": "Structs are value types copied on assignment. Classes are reference types sharing the same instance. Structs do not support inheritance",
+        "difficulty": 1
+      },
+      {
+        "id": "ap5",
+        "question": "What is the delegate pattern?",
+        "answer": "A design pattern where one object delegates responsibilities to another object conforming to a protocol, common in iOS for handling events",
+        "difficulty": 1
+      },
+      {
+        "id": "ap6",
+        "question": "How would you design a settings synchronization service across Apple devices?",
+        "answer": "Use iCloud key-value storage for small settings, conflict resolution with timestamps, and background sync with retry logic for network failures",
+        "difficulty": 1
+      },
+      {
+        "id": "ap7",
+        "question": "What is Grand Central Dispatch (GCD)?",
+        "answer": "Apple's concurrency framework that manages thread pools and allows you to dispatch tasks to serial or concurrent queues",
+        "difficulty": 1
+      },
+      {
+        "id": "ap8",
+        "question": "What is the difference between a serial and concurrent queue in GCD?",
+        "answer": "A serial queue executes one task at a time in order. A concurrent queue executes multiple tasks simultaneously",
+        "difficulty": 1
+      },
+      {
+        "id": "ap9",
+        "question": "What is the MVC design pattern?",
+        "answer": "Model View Controller — separates an app into data (Model), UI (View), and logic that connects them (Controller)",
+        "difficulty": 1
+      },
+      {
+        "id": "ap10",
+        "question": "Tell me about a time you took a project end to end with minimal direction.",
+        "answer": "Use STAR method. Highlight ownership, decisions made independently, how you handled ambiguity, and the impact of the outcome",
+        "difficulty": 1
+      },
+      {
+        "id": "ap11",
+        "question": "How would you handle code quality under pressure and tight deadlines?",
+        "answer": "Prioritize critical paths, write tests for core functionality, communicate tradeoffs to stakeholders, and schedule time to address technical debt post-release",
+        "difficulty": 1
+      },
+      {
+        "id": "ap12",
+        "question": "What is the difference between SQL and NoSQL databases?",
+        "answer": "SQL databases use structured tables and schemas with ACID guarantees. NoSQL databases use flexible document or key-value storage optimized for scale and speed",
+        "difficulty": 1
+      },
+      {
+        "id": "ap13",
+        "question": "What is caching and what problem does it solve?",
+        "answer": "Storing frequently accessed data in fast memory to reduce latency and database load. Solves slow repeated reads of the same data",
+        "difficulty": 1
+      },
+      {
+        "id": "ap14",
+        "question": "What is the SOLID principle?",
+        "answer": "Five OOP design principles: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion",
+        "difficulty": 1
+      },
+      {
+        "id": "ap15",
+        "question": "How would you approach debugging a production crash with no reproduction steps?",
+        "answer": "Analyze crash logs and stack traces, check recent code changes, add logging around suspect areas, reproduce in staging, and use crash reporting tools like Firebase",
+        "difficulty": 1
+      },
+      {
+        "id": "ap16",
+        "question": "What is the observer pattern?",
+        "answer": "A design pattern where an object maintains a list of dependents and notifies them of state changes. Used in iOS via NotificationCenter and KVO",
+        "difficulty": 1
+      },
+      {
+        "id": "ap17",
+        "question": "What is the difference between synchronous and asynchronous execution?",
+        "answer": "Synchronous blocks the current thread until the task completes. Asynchronous submits the task and returns immediately, continuing execution",
+        "difficulty": 1
+      },
+      {
+        "id": "ap18",
+        "question": "What is Big O notation?",
+        "answer": "A way to describe the time or space complexity of an algorithm as the input size grows, ignoring constants and lower order terms",
+        "difficulty": 1
+      },
+      {
+        "id": "ap19",
+        "question": "How do you ensure privacy in system design at Apple?",
+        "answer": "Minimize data collection, process data on-device where possible, encrypt data in transit and at rest, and give users clear control over their data",
+        "difficulty": 1
+      },
+      {
+        "id": "ap20",
+        "question": "What is the difference between a deep copy and a shallow copy?",
+        "answer": "A shallow copy copies references to objects. A deep copy recursively copies all objects so changes to one do not affect the other",
+        "difficulty": 1
+      }
+    ],
+    "NVIDIA | Hardware Engineer": [
+      {
+        "id": "nv1",
+        "question": "What is a GPU and how does it differ from a CPU?",
+        "answer": "A GPU has thousands of smaller cores optimized for parallel processing. A CPU has fewer but more powerful cores optimized for sequential tasks",
+        "difficulty": 1
+      },
+      {
+        "id": "nv2",
+        "question": "What is CUDA?",
+        "answer": "NVIDIA's parallel computing platform and programming model that allows developers to use GPUs for general purpose processing",
+        "difficulty": 1
+      },
+      {
+        "id": "nv3",
+        "question": "What is a finite state machine?",
+        "answer": "A computational model with a finite number of states, transitions between states, and actions. Used extensively in digital design and hardware control logic",
+        "difficulty": 1
+      },
+      {
+        "id": "nv4",
+        "question": "What is a Karnaugh map (K-map)?",
+        "answer": "A visual method for simplifying Boolean algebra expressions to minimize the number of logic gates needed in a circuit",
+        "difficulty": 1
+      },
+      {
+        "id": "nv5",
+        "question": "What is the difference between combinational and sequential logic?",
+        "answer": "Combinational logic output depends only on current inputs. Sequential logic output depends on current inputs and past states stored in memory elements",
+        "difficulty": 1
+      },
+      {
+        "id": "nv6",
+        "question": "What is a flip-flop?",
+        "answer": "A basic memory element in digital circuits that stores one bit of state and changes output on a clock edge",
+        "difficulty": 1
+      },
+      {
+        "id": "nv7",
+        "question": "What is power sequencing?",
+        "answer": "The controlled order in which power rails are enabled during system startup to ensure hardware components receive power in the correct sequence",
+        "difficulty": 1
+      },
+      {
+        "id": "nv8",
+        "question": "What is PCIe?",
+        "answer": "Peripheral Component Interconnect Express — a high speed serial bus interface used to connect GPUs, SSDs, and other hardware to a motherboard",
+        "difficulty": 1
+      },
+      {
+        "id": "nv9",
+        "question": "What is the difference between SRAM and DRAM?",
+        "answer": "SRAM is faster and does not need refreshing but is more expensive. DRAM is slower and needs constant refreshing but is cheaper and denser",
+        "difficulty": 1
+      },
+      {
+        "id": "nv10",
+        "question": "What is a System on Chip (SoC)?",
+        "answer": "An integrated circuit that combines all components of a computer including CPU, GPU, memory, and I/O onto a single chip",
+        "difficulty": 1
+      },
+      {
+        "id": "nv11",
+        "question": "What is memory bandwidth and why does it matter for GPUs?",
+        "answer": "The rate at which data can be read from or written to memory. GPUs need high memory bandwidth to feed thousands of cores with data simultaneously",
+        "difficulty": 1
+      },
+      {
+        "id": "nv12",
+        "question": "What is a pipeline in computer architecture?",
+        "answer": "A technique where multiple instruction stages are overlapped in execution, similar to an assembly line, to increase instruction throughput",
+        "difficulty": 1
+      },
+      {
+        "id": "nv13",
+        "question": "What is cache coherence?",
+        "answer": "The consistency of shared data stored in multiple local caches of a multi-processor system",
+        "difficulty": 1
+      },
+      {
+        "id": "nv14",
+        "question": "What is thermal design power (TDP)?",
+        "answer": "The maximum amount of heat a chip is expected to generate under sustained load, used to design cooling solutions",
+        "difficulty": 1
+      },
+      {
+        "id": "nv15",
+        "question": "What is DFS traversal on a graph?",
+        "answer": "Depth First Search explores as far as possible along each branch before backtracking, using a stack or recursion",
+        "difficulty": 1
+      },
+      {
+        "id": "nv16",
+        "question": "What is the difference between big endian and little endian?",
+        "answer": "Big endian stores the most significant byte first. Little endian stores the least significant byte first",
+        "difficulty": 1
+      },
+      {
+        "id": "nv17",
+        "question": "What is a voltage regulator?",
+        "answer": "A circuit that maintains a constant output voltage regardless of changes in input voltage or load current",
+        "difficulty": 1
+      },
+      {
+        "id": "nv18",
+        "question": "What is the purpose of a clock signal in digital circuits?",
+        "answer": "To synchronize the operations of all components in a circuit, ensuring data is captured and transferred at the correct time",
+        "difficulty": 1
+      },
+      {
+        "id": "nv19",
+        "question": "What is VHDL or Verilog?",
+        "answer": "Hardware description languages used to model and simulate digital circuits before physical implementation",
+        "difficulty": 1
+      },
+      {
+        "id": "nv20",
+        "question": "What is the von Neumann architecture?",
+        "answer": "A computer architecture where CPU, memory, and I/O share a single bus, with instructions and data stored in the same memory",
+        "difficulty": 1
+      }
     ]
   }
 }
