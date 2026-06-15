@@ -1,3 +1,764 @@
 {
-    "decks": {}
+  "decks": {
+    "Python Basics": [
+      {
+        "id": "p1",
+        "question": "What is a list?",
+        "answer": "An ordered, mutable collection of items",
+        "difficulty": 1
+      },
+      {
+        "id": "p2",
+        "question": "What is a dictionary?",
+        "answer": "A collection of key-value pairs",
+        "difficulty": 1
+      },
+      {
+        "id": "p3",
+        "question": "What does len() do?",
+        "answer": "Returns the number of items in an object",
+        "difficulty": 1
+      },
+      {
+        "id": "p4",
+        "question": "What is a list comprehension?",
+        "answer": "A concise way to create lists: [x for x in iterable]",
+        "difficulty": 1
+      },
+      {
+        "id": "p5",
+        "question": "What is the difference between append() and extend()?",
+        "answer": "append() adds a single item, extend() adds all items from an iterable",
+        "difficulty": 1
+      },
+      {
+        "id": "p6",
+        "question": "What is a lambda function?",
+        "answer": "An anonymous one-line function defined with the lambda keyword",
+        "difficulty": 1
+      },
+      {
+        "id": "p7",
+        "question": "What does range(3) return?",
+        "answer": "0, 1, 2",
+        "difficulty": 1
+      },
+      {
+        "id": "p8",
+        "question": "What is the difference between == and is?",
+        "answer": "== checks value equality, is checks if two variables point to the same object",
+        "difficulty": 1
+      },
+      {
+        "id": "p9",
+        "question": "What is a tuple?",
+        "answer": "An ordered, immutable collection of items",
+        "difficulty": 1
+      },
+      {
+        "id": "p10",
+        "question": "What does the pass keyword do?",
+        "answer": "Acts as a placeholder that does nothing",
+        "difficulty": 1
+      },
+      {
+        "id": "p11",
+        "question": "What is a set?",
+        "answer": "An unordered collection of unique items",
+        "difficulty": 1
+      },
+      {
+        "id": "p12",
+        "question": "What is the difference between a list and a tuple?",
+        "answer": "Lists are mutable, tuples are immutable",
+        "difficulty": 1
+      },
+      {
+        "id": "p13",
+        "question": "What does the zip() function do?",
+        "answer": "Combines multiple iterables into tuples element by element",
+        "difficulty": 1
+      },
+      {
+        "id": "p14",
+        "question": "What is a decorator?",
+        "answer": "A function that wraps another function to modify its behavior",
+        "difficulty": 1
+      },
+      {
+        "id": "p15",
+        "question": "What is the difference between *args and **kwargs?",
+        "answer": "*args passes variable positional arguments, **kwargs passes variable keyword arguments",
+        "difficulty": 1
+      },
+      {
+        "id": "p16",
+        "question": "What is a generator?",
+        "answer": "A function that yields values one at a time using the yield keyword instead of return",
+        "difficulty": 1
+      },
+      {
+        "id": "p17",
+        "question": "What does enumerate() do?",
+        "answer": "Returns an iterator of tuples containing the index and value of each item",
+        "difficulty": 1
+      },
+      {
+        "id": "p18",
+        "question": "What is the difference between deep copy and shallow copy?",
+        "answer": "Shallow copy copies references, deep copy copies the actual objects recursively",
+        "difficulty": 1
+      },
+      {
+        "id": "p19",
+        "question": "What is None in Python?",
+        "answer": "A special constant representing the absence of a value",
+        "difficulty": 1
+      },
+      {
+        "id": "p20",
+        "question": "What does the map() function do?",
+        "answer": "Applies a function to every item in an iterable and returns a map object",
+        "difficulty": 1
+      },
+      {
+        "id": "p21",
+        "question": "What is exception handling?",
+        "answer": "Using try/except blocks to catch and handle errors gracefully",
+        "difficulty": 1
+      },
+      {
+        "id": "p22",
+        "question": "What is the global keyword?",
+        "answer": "Declares that a variable inside a function refers to a globally scoped variable",
+        "difficulty": 1
+      },
+      {
+        "id": "p23",
+        "question": "What is a module in Python?",
+        "answer": "A file containing Python code that can be imported and used in other files",
+        "difficulty": 1
+      },
+      {
+        "id": "p24",
+        "question": "What does the filter() function do?",
+        "answer": "Filters items from an iterable based on a function that returns True or False",
+        "difficulty": 1
+      },
+      {
+        "id": "p25",
+        "question": "What is the difference between break and continue?",
+        "answer": "break exits the loop entirely, continue skips to the next iteration",
+        "difficulty": 1
+      }
+    ],
+    "Data Structures & Algorithms": [
+      {
+        "id": "d1",
+        "question": "What is Big-O notation?",
+        "answer": "A way to describe time or space complexity as input size grows",
+        "difficulty": 1
+      },
+      {
+        "id": "d2",
+        "question": "What is the time complexity of binary search?",
+        "answer": "O(log n)",
+        "difficulty": 1
+      },
+      {
+        "id": "d3",
+        "question": "What is a linked list?",
+        "answer": "A linear data structure where each element points to the next via a pointer",
+        "difficulty": 1
+      },
+      {
+        "id": "d4",
+        "question": "What is a stack?",
+        "answer": "A data structure that follows Last In First Out (LIFO) order",
+        "difficulty": 1
+      },
+      {
+        "id": "d5",
+        "question": "What is a queue?",
+        "answer": "A data structure that follows First In First Out (FIFO) order",
+        "difficulty": 1
+      },
+      {
+        "id": "d6",
+        "question": "What is the time complexity of accessing an array element?",
+        "answer": "O(1)",
+        "difficulty": 1
+      },
+      {
+        "id": "d7",
+        "question": "What is a hash table?",
+        "answer": "A data structure that maps keys to values using a hash function for O(1) average lookups",
+        "difficulty": 1
+      },
+      {
+        "id": "d8",
+        "question": "What is a binary tree?",
+        "answer": "A tree where each node has at most two children",
+        "difficulty": 1
+      },
+      {
+        "id": "d9",
+        "question": "What is the difference between BFS and DFS?",
+        "answer": "BFS explores level by level using a queue, DFS explores depth-first using a stack or recursion",
+        "difficulty": 1
+      },
+      {
+        "id": "d10",
+        "question": "What is the time complexity of quicksort on average?",
+        "answer": "O(n log n)",
+        "difficulty": 1
+      },
+      {
+        "id": "d11",
+        "question": "What is a heap?",
+        "answer": "A tree-based data structure where the parent is always greater than or less than its children",
+        "difficulty": 1
+      },
+      {
+        "id": "d12",
+        "question": "What is dynamic programming?",
+        "answer": "Breaking a problem into subproblems and storing results to avoid redundant computation",
+        "difficulty": 1
+      },
+      {
+        "id": "d13",
+        "question": "What is memoization?",
+        "answer": "Caching the results of expensive function calls to avoid recomputation",
+        "difficulty": 1
+      },
+      {
+        "id": "d14",
+        "question": "What is the time complexity of inserting into a hash table?",
+        "answer": "O(1) on average",
+        "difficulty": 1
+      },
+      {
+        "id": "d15",
+        "question": "What is a graph?",
+        "answer": "A data structure of nodes connected by edges, can be directed or undirected",
+        "difficulty": 1
+      },
+      {
+        "id": "d16",
+        "question": "What is the difference between a tree and a graph?",
+        "answer": "A tree is a graph with no cycles and a single root node",
+        "difficulty": 1
+      },
+      {
+        "id": "d17",
+        "question": "What is bubble sort?",
+        "answer": "A sorting algorithm that repeatedly swaps adjacent elements if they are in the wrong order, O(n^2)",
+        "difficulty": 1
+      },
+      {
+        "id": "d18",
+        "question": "What is merge sort?",
+        "answer": "A divide and conquer sorting algorithm with O(n log n) time complexity",
+        "difficulty": 1
+      },
+      {
+        "id": "d19",
+        "question": "What is a trie?",
+        "answer": "A tree data structure used to store strings where each node represents a character",
+        "difficulty": 1
+      },
+      {
+        "id": "d20",
+        "question": "What is a two pointer technique?",
+        "answer": "Using two pointers to traverse an array simultaneously to solve problems efficiently",
+        "difficulty": 1
+      },
+      {
+        "id": "d21",
+        "question": "What is a sliding window?",
+        "answer": "A technique that maintains a subset of data within a window that slides across an array",
+        "difficulty": 1
+      },
+      {
+        "id": "d22",
+        "question": "What is recursion?",
+        "answer": "A function that calls itself until a base case is reached",
+        "difficulty": 1
+      },
+      {
+        "id": "d23",
+        "question": "What is the space complexity of a recursive function?",
+        "answer": "O(n) due to the call stack growing with each recursive call",
+        "difficulty": 1
+      },
+      {
+        "id": "d24",
+        "question": "What is an adjacency list?",
+        "answer": "A way to represent a graph where each node stores a list of its neighbors",
+        "difficulty": 1
+      },
+      {
+        "id": "d25",
+        "question": "What is the difference between a min heap and a max heap?",
+        "answer": "Min heap: smallest element at root. Max heap: largest element at root",
+        "difficulty": 1
+      }
+    ],
+    "Object Oriented Programming": [
+      {
+        "id": "o1",
+        "question": "What is encapsulation?",
+        "answer": "Bundling data and methods within a class and restricting direct access from outside",
+        "difficulty": 1
+      },
+      {
+        "id": "o2",
+        "question": "What is inheritance?",
+        "answer": "A mechanism where a class derives properties and methods from a parent class",
+        "difficulty": 1
+      },
+      {
+        "id": "o3",
+        "question": "What is polymorphism?",
+        "answer": "The ability of different objects to respond to the same method in different ways",
+        "difficulty": 1
+      },
+      {
+        "id": "o4",
+        "question": "What is abstraction?",
+        "answer": "Hiding complex implementation details and exposing only necessary features",
+        "difficulty": 1
+      },
+      {
+        "id": "o5",
+        "question": "What is a constructor?",
+        "answer": "A special method called when an object is instantiated to initialize its attributes",
+        "difficulty": 1
+      },
+      {
+        "id": "o6",
+        "question": "What is the difference between a class and an object?",
+        "answer": "A class is a blueprint, an object is an instance of that class",
+        "difficulty": 1
+      },
+      {
+        "id": "o7",
+        "question": "What is method overriding?",
+        "answer": "Redefining a parent class method in a child class to change its behavior",
+        "difficulty": 1
+      },
+      {
+        "id": "o8",
+        "question": "What is method overloading?",
+        "answer": "Defining multiple methods with the same name but different parameters",
+        "difficulty": 1
+      },
+      {
+        "id": "o9",
+        "question": "What is an interface?",
+        "answer": "A contract that defines methods a class must implement without providing implementation",
+        "difficulty": 1
+      },
+      {
+        "id": "o10",
+        "question": "What is an abstract class?",
+        "answer": "A class that cannot be instantiated and may contain abstract methods subclasses must implement",
+        "difficulty": 1
+      },
+      {
+        "id": "o11",
+        "question": "What is the difference between public, private, and protected?",
+        "answer": "Public: accessible anywhere. Private: accessible only within the class. Protected: accessible within class and subclasses",
+        "difficulty": 1
+      },
+      {
+        "id": "o12",
+        "question": "What is a static method?",
+        "answer": "A method that belongs to the class rather than an instance and cannot access instance variables",
+        "difficulty": 1
+      },
+      {
+        "id": "o13",
+        "question": "What is composition?",
+        "answer": "Building complex objects by combining simpler objects rather than using inheritance",
+        "difficulty": 1
+      },
+      {
+        "id": "o14",
+        "question": "What is the difference between composition and inheritance?",
+        "answer": "Inheritance is an is-a relationship, composition is a has-a relationship",
+        "difficulty": 1
+      },
+      {
+        "id": "o15",
+        "question": "What is a destructor?",
+        "answer": "A method called when an object is destroyed to release resources",
+        "difficulty": 1
+      },
+      {
+        "id": "o16",
+        "question": "What is coupling?",
+        "answer": "The degree of dependency between classes, lower coupling is better for maintainability",
+        "difficulty": 1
+      },
+      {
+        "id": "o17",
+        "question": "What is cohesion?",
+        "answer": "How closely related the responsibilities of a class are, higher cohesion is better",
+        "difficulty": 1
+      },
+      {
+        "id": "o18",
+        "question": "What is the Single Responsibility Principle?",
+        "answer": "A class should have only one reason to change, meaning it should have only one job",
+        "difficulty": 1
+      },
+      {
+        "id": "o19",
+        "question": "What is the Open/Closed Principle?",
+        "answer": "Classes should be open for extension but closed for modification",
+        "difficulty": 1
+      },
+      {
+        "id": "o20",
+        "question": "What is a design pattern?",
+        "answer": "A reusable solution to a commonly occurring problem in software design",
+        "difficulty": 1
+      },
+      {
+        "id": "o21",
+        "question": "What is the Singleton pattern?",
+        "answer": "A design pattern that ensures only one instance of a class exists",
+        "difficulty": 1
+      },
+      {
+        "id": "o22",
+        "question": "What is the Factory pattern?",
+        "answer": "A design pattern that creates objects without specifying the exact class to instantiate",
+        "difficulty": 1
+      },
+      {
+        "id": "o23",
+        "question": "What is the Observer pattern?",
+        "answer": "A design pattern where objects subscribe to events and get notified when they occur",
+        "difficulty": 1
+      },
+      {
+        "id": "o24",
+        "question": "What is duck typing?",
+        "answer": "If an object has the required methods and properties, it can be used regardless of its type",
+        "difficulty": 1
+      },
+      {
+        "id": "o25",
+        "question": "What is the difference between an instance variable and a class variable?",
+        "answer": "Instance variables are unique to each object, class variables are shared across all instances",
+        "difficulty": 1
+      }
+    ],
+    "Web Development": [
+      {
+        "id": "w1",
+        "question": "What is HTTP?",
+        "answer": "HyperText Transfer Protocol, the foundation of data communication on the web",
+        "difficulty": 1
+      },
+      {
+        "id": "w2",
+        "question": "What is the difference between GET and POST?",
+        "answer": "GET retrieves data, POST sends data to the server to create or update a resource",
+        "difficulty": 1
+      },
+      {
+        "id": "w3",
+        "question": "What is a REST API?",
+        "answer": "An API that uses HTTP methods and follows stateless communication principles",
+        "difficulty": 1
+      },
+      {
+        "id": "w4",
+        "question": "What is JSON?",
+        "answer": "JavaScript Object Notation, a lightweight format for storing and transporting data",
+        "difficulty": 1
+      },
+      {
+        "id": "w5",
+        "question": "What is the DOM?",
+        "answer": "Document Object Model, a tree representation of HTML elements that JavaScript can manipulate",
+        "difficulty": 1
+      },
+      {
+        "id": "w6",
+        "question": "What is the difference between HTML, CSS, and JavaScript?",
+        "answer": "HTML is structure, CSS is styling, JavaScript is behavior",
+        "difficulty": 1
+      },
+      {
+        "id": "w7",
+        "question": "What is a 404 error?",
+        "answer": "A HTTP status code meaning the requested resource was not found",
+        "difficulty": 1
+      },
+      {
+        "id": "w8",
+        "question": "What is a 500 error?",
+        "answer": "A HTTP status code meaning an internal server error occurred",
+        "difficulty": 1
+      },
+      {
+        "id": "w9",
+        "question": "What is CORS?",
+        "answer": "Cross Origin Resource Sharing, a security feature that controls which domains can access an API",
+        "difficulty": 1
+      },
+      {
+        "id": "w10",
+        "question": "What is a cookie?",
+        "answer": "A small piece of data stored in the browser used to remember information between sessions",
+        "difficulty": 1
+      },
+      {
+        "id": "w11",
+        "question": "What is a session?",
+        "answer": "Server-side storage of user data that persists across multiple requests",
+        "difficulty": 1
+      },
+      {
+        "id": "w12",
+        "question": "What is the difference between authentication and authorization?",
+        "answer": "Authentication verifies who you are, authorization determines what you can access",
+        "difficulty": 1
+      },
+      {
+        "id": "w13",
+        "question": "What is JWT?",
+        "answer": "JSON Web Token, a compact way to securely transmit information between parties as a JSON object",
+        "difficulty": 1
+      },
+      {
+        "id": "w14",
+        "question": "What is a CDN?",
+        "answer": "Content Delivery Network, a distributed network of servers that delivers content faster based on location",
+        "difficulty": 1
+      },
+      {
+        "id": "w15",
+        "question": "What is the difference between SQL and NoSQL?",
+        "answer": "SQL uses structured tables with schemas, NoSQL uses flexible document or key-value storage",
+        "difficulty": 1
+      },
+      {
+        "id": "w16",
+        "question": "What is an ORM?",
+        "answer": "Object Relational Mapper, a tool that lets you interact with a database using objects instead of SQL",
+        "difficulty": 1
+      },
+      {
+        "id": "w17",
+        "question": "What is caching?",
+        "answer": "Storing frequently accessed data temporarily to reduce load times and server requests",
+        "difficulty": 1
+      },
+      {
+        "id": "w18",
+        "question": "What is a webhook?",
+        "answer": "A way for an app to send real-time data to another app when an event occurs",
+        "difficulty": 1
+      },
+      {
+        "id": "w19",
+        "question": "What is the difference between localStorage and sessionStorage?",
+        "answer": "localStorage persists after the browser closes, sessionStorage is cleared when the tab closes",
+        "difficulty": 1
+      },
+      {
+        "id": "w20",
+        "question": "What is a load balancer?",
+        "answer": "A server that distributes incoming traffic across multiple servers to prevent overload",
+        "difficulty": 1
+      },
+      {
+        "id": "w21",
+        "question": "What is responsive design?",
+        "answer": "Designing web pages that adapt their layout to different screen sizes",
+        "difficulty": 1
+      },
+      {
+        "id": "w22",
+        "question": "What is a microservice?",
+        "answer": "An architectural style where an app is built as small independent services that communicate via APIs",
+        "difficulty": 1
+      },
+      {
+        "id": "w23",
+        "question": "What is CI/CD?",
+        "answer": "Continuous Integration and Continuous Deployment, automating the process of testing and deploying code",
+        "difficulty": 1
+      },
+      {
+        "id": "w24",
+        "question": "What is Docker?",
+        "answer": "A platform that packages applications into containers so they run consistently across environments",
+        "difficulty": 1
+      },
+      {
+        "id": "w25",
+        "question": "What is an index in a database?",
+        "answer": "A data structure that speeds up data retrieval by allowing faster lookups on specific columns",
+        "difficulty": 1
+      }
+    ],
+    "AI & Machine Learning": [
+      {
+        "id": "a1",
+        "question": "What is supervised learning?",
+        "answer": "Training a model on labeled data where the correct output is already known",
+        "difficulty": 1
+      },
+      {
+        "id": "a2",
+        "question": "What is unsupervised learning?",
+        "answer": "Training a model on unlabeled data to find hidden patterns or groupings",
+        "difficulty": 1
+      },
+      {
+        "id": "a3",
+        "question": "What is a neural network?",
+        "answer": "A model inspired by the brain consisting of layers of interconnected nodes that learn from data",
+        "difficulty": 1
+      },
+      {
+        "id": "a4",
+        "question": "What is overfitting?",
+        "answer": "When a model performs well on training data but poorly on new unseen data",
+        "difficulty": 1
+      },
+      {
+        "id": "a5",
+        "question": "What is underfitting?",
+        "answer": "When a model is too simple to capture the underlying patterns in the data",
+        "difficulty": 1
+      },
+      {
+        "id": "a6",
+        "question": "What is a training set vs test set?",
+        "answer": "Training set is used to train the model, test set is used to evaluate its performance on unseen data",
+        "difficulty": 1
+      },
+      {
+        "id": "a7",
+        "question": "What is gradient descent?",
+        "answer": "An optimization algorithm that minimizes a loss function by iteratively adjusting model parameters",
+        "difficulty": 1
+      },
+      {
+        "id": "a8",
+        "question": "What is a loss function?",
+        "answer": "A function that measures how far a model's predictions are from the actual values",
+        "difficulty": 1
+      },
+      {
+        "id": "a9",
+        "question": "What is a hyperparameter?",
+        "answer": "A parameter set before training that controls the learning process, such as learning rate or batch size",
+        "difficulty": 1
+      },
+      {
+        "id": "a10",
+        "question": "What is transfer learning?",
+        "answer": "Reusing a pre-trained model on a new but related task to save time and data",
+        "difficulty": 1
+      },
+      {
+        "id": "a11",
+        "question": "What is a convolutional neural network?",
+        "answer": "A neural network designed for image processing that uses convolutional layers to detect features",
+        "difficulty": 1
+      },
+      {
+        "id": "a12",
+        "question": "What is a large language model?",
+        "answer": "A neural network trained on massive amounts of text data to understand and generate language",
+        "difficulty": 2
+      },
+      {
+        "id": "a13",
+        "question": "What is reinforcement learning?",
+        "answer": "Training an agent to make decisions by rewarding desired behaviors and penalizing undesired ones",
+        "difficulty": 1
+      },
+      {
+        "id": "a14",
+        "question": "What is a confusion matrix?",
+        "answer": "A table that summarizes the performance of a classification model showing true/false positives and negatives",
+        "difficulty": 1
+      },
+      {
+        "id": "a15",
+        "question": "What is precision?",
+        "answer": "The proportion of positive predictions that were actually correct",
+        "difficulty": 1
+      },
+      {
+        "id": "a16",
+        "question": "What is recall?",
+        "answer": "The proportion of actual positives that were correctly identified by the model",
+        "difficulty": 1
+      },
+      {
+        "id": "a17",
+        "question": "What is feature engineering?",
+        "answer": "The process of selecting and transforming raw data into features that improve model performance",
+        "difficulty": 1
+      },
+      {
+        "id": "a18",
+        "question": "What is normalization?",
+        "answer": "Scaling input data to a standard range, typically 0 to 1, to improve model training",
+        "difficulty": 1
+      },
+      {
+        "id": "a19",
+        "question": "What is a decision tree?",
+        "answer": "A model that splits data into branches based on feature values to make predictions",
+        "difficulty": 1
+      },
+      {
+        "id": "a20",
+        "question": "What is random forest?",
+        "answer": "An ensemble of decision trees that combines their predictions to improve accuracy",
+        "difficulty": 1
+      },
+      {
+        "id": "a21",
+        "question": "What is k-means clustering?",
+        "answer": "An unsupervised algorithm that groups data into k clusters based on similarity",
+        "difficulty": 1
+      },
+      {
+        "id": "a22",
+        "question": "What is a transformer model?",
+        "answer": "A neural network architecture that uses attention mechanisms, foundational to modern LLMs",
+        "difficulty": 1
+      },
+      {
+        "id": "a23",
+        "question": "What is attention in machine learning?",
+        "answer": "A mechanism that allows a model to focus on the most relevant parts of the input when making predictions",
+        "difficulty": 1
+      },
+      {
+        "id": "a24",
+        "question": "What is cross-validation?",
+        "answer": "A technique that evaluates a model by training and testing on different subsets of data multiple times",
+        "difficulty": 1
+      },
+      {
+        "id": "a25",
+        "question": "What is regularization?",
+        "answer": "A technique that adds a penalty to the loss function to reduce overfitting by discouraging complex models",
+        "difficulty": 1
+      }
+    ]
+  }
 }
