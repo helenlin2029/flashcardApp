@@ -17,7 +17,7 @@ body {
 /* --- Navbar --- */
 #navbar {
     background-color: #1b2a4a;
-    padding: 16px 40px;
+    padding: 16px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,9 +56,9 @@ body {
 
 /* --- Screens --- */
 .screen {
-    max-width: 700px;
+    max-width: 1100px;
     margin: 40px auto;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
 .hidden {
@@ -178,6 +178,7 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 24px;
 }
 
 .card-text {
@@ -317,7 +318,7 @@ h3 {
     background-color: #fdfaf4;
     border: 2px solid #1b2a4a;
     border-radius: 16px;
-    padding: 48px 40px;
+    padding: 60px 80px;
     text-align: center;
 }
 
@@ -433,10 +434,13 @@ h3 {
 
 /* --- Quiz Options --- */
 #quiz-options {
-    display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
+    gap: 16px;
+    margin-top: 28px;
+}
+
+#quiz-options:not(.hidden) {
+    display: flex;
 }
 
 .option-btn {
@@ -475,4 +479,116 @@ h3 {
     color: #1b2a4a;
     font-weight: 600;
     margin-bottom: 20px;
+}
+
+/* --- Mode Select --- */
+#mode-select {
+    margin-bottom: 32px;
+}
+
+#mode-select h2 {
+    margin-bottom: 16px;
+}
+
+#mode-select-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.mode-card {
+    flex: 1;
+    background-color: #fdfaf4;
+    border: 2px solid #1b2a4a;
+    border-radius: 12px;
+    padding: 24px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.mode-card:hover {
+    background-color: #1b2a4a;
+    color: white;
+}
+
+.mode-card:hover h3,
+.mode-card:hover p {
+    color: white;
+}
+
+.mode-card h3 {
+    font-size: 1.1rem;
+    color: #1b2a4a;
+    margin-bottom: 8px;
+}
+
+.mode-card p {
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* --- Learning Nav --- */
+#learning-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+#learning-nav button {
+    background-color: transparent;
+    color: #1b2a4a;
+    border: 2px solid #1b2a4a;
+    padding: 8px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+#learning-nav button:hover {
+    background-color: #1b2a4a;
+    color: white;
+}
+
+/* --- Results --- */
+#results {
+    display: flex;
+    gap: 24px;
+    margin: 24px 0;
+    text-align: left;
+}
+
+.result-col {
+    flex: 1;
+    background-color: #fdfaf4;
+    border: 2px solid #1b2a4a;
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+
+.result-col h3 {
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+.result-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.result-col ul li {
+    font-size: 0.85rem;
+    color: #2c2c2c;
+    padding: 6px 0;
+    border-bottom: 1px solid #e8e0d0;
+}
+
+.result-col ul li:last-child {
+    border-bottom: none;
 }

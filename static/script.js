@@ -5,6 +5,8 @@ let quizIndex = 0;
 let currentMode = 'learning';
 let quizScore = 0;
 let quizTotal = 0;
+let correctCards = [];
+let wrongCards = [];
 
 // --- Screen Navigation ---
 
@@ -12,7 +14,6 @@ function showHome() {
     hide("deck-screen");
     hide("quiz-screen");
     show("home-screen");
-    hide("nav-quiz-btn");
     loadDecks();
 }
 
@@ -20,17 +21,15 @@ function showDeck() {
     hide("home-screen");
     hide("quiz-screen");
     show("deck-screen");
-    show("nav-quiz-btn");
     loadCards();
 }
 
-function showQuiz() {
+function showQuiz(mode) {
+    currentMode = mode;
     hide("home-screen");
     hide("deck-screen");
     show("quiz-screen");
-    currentMode = 'learning';
-    document.getElementById('btn-learning').classList.add('active');
-    document.getElementById('btn-quiz').classList.remove('active');
+    document.getElementById("quiz-screen-title").textContent = currentDeck;
     startQuiz();
 }
 
@@ -92,7 +91,6 @@ async function deleteDeck(name) {
 function openDeck(name) {
     currentDeck = name;
     document.getElementById("deck-title").textContent = name;
-    document.getElementById("quiz-deck-title").textContent = name;
     showDeck();
 }
 
@@ -135,15 +133,6 @@ async function deleteCard(cardId) {
     loadCards();
 }
 
-// --- Mode ---
-
-function setMode(mode) {
-    currentMode = mode;
-    document.getElementById('btn-learning').classList.toggle('active', mode === 'learning');
-    document.getElementById('btn-quiz').classList.toggle('active', mode === 'quiz');
-    startQuiz();
-}
-
 // --- Quiz ---
 
 async function startQuiz() {
@@ -153,6 +142,8 @@ async function startQuiz() {
     quizIndex = 0;
     quizScore = 0;
     quizTotal = 0;
+    correctCards = [];
+    wrongCards = [];
     hide("quiz-complete");
     show("quiz-card");
     showQuestion();
@@ -178,33 +169,64 @@ function showQuestion() {
         return;
     }
 
-    // Reset card state
     const card = quizCards[quizIndex];
     document.getElementById("question-text").textContent = card.question;
     document.getElementById("answer-text").textContent = card.answer;
     hide("answer-text");
-    hide("learning-buttons");
     hide("quiz-options");
     hide("flip-hint");
 
+    document.getElementById("quiz-card").onclick = null;
+    hide("flip-hint");
+    hide("learning-nav");
+    showOptions(card);
+
     if (currentMode === 'learning') {
-        show("flip-hint");
-        document.getElementById("quiz-card").onclick = flipCard;
-    } else {
-        document.getElementById("quiz-card").onclick = null;
-        showOptions(card);
+        show("learning-nav");
+    }
+
+    if (currentMode === 'quiz') {
+        const pct = Math.round((quizScore / quizTotal) * 100);
+        document.getElementById("quiz-score").textContent =
+            `You got ${quizScore} out of ${quizTotal} correct (${pct}%)`;
+
+        const correctList = document.getElementById("correct-list");
+        const wrongList = document.getElementById("wrong-list");
+        correctList.innerHTML = "";
+        wrongList.innerHTML = "";
+
+        correctCards.forEach(card => {
+            correctList.innerHTML += `<li>${card.question}</li>`;
+        });
+        wrongCards.forEach(card => {
+            wrongList.innerHTML += `<li>${card.question}</li>`;
+        });
     }
 }
 
 function flipCard() {
-    show("answer-text");
-    show("learning-buttons");
-    hide("flip-hint");
-    document.getElementById("quiz-card").onclick = null;
+    if (document.getElementById("answer-text").classList.contains("hidden")) {
+        show("answer-text");
+        hide("flip-hint");
+        document.getElementById("quiz-card").onclick = nextCard;
+    }
+}
+
+function prevCard() {
+    if (quizIndex > 0) {
+        quizIndex--;
+        showQuestion();
+    }
+}
+
+function nextCard() {
+    if (quizIndex < quizCards.length - 1) {
+        quizIndex++;
+        showQuestion();
+    }
 }
 
 function showOptions(currentCard) {
-    // Need at least 3 cards total for 2 wrong answers
     const otherCards = quizCards.filter((_, i) => i !== quizIndex);
 
     let options;
@@ -213,7 +235,6 @@ function showOptions(currentCard) {
         options = shuffleCards([currentCard, ...wrong]);
     } else if (otherCards.length === 1) {
         options = shuffleCards([currentCard, otherCards[0]]);
-        // Pad with a dummy if needed
         while (options.length < 3) options.push({ id: 'dummy', answer: 'None of the above' });
     } else {
         options = [currentCard, { id: 'dummy1', answer: 'None of the above' }, { id: 'dummy2', answer: 'Not applicable' }];
@@ -232,32 +253,26 @@ function showOptions(currentCard) {
 function selectOption(index) {
     const btn = document.getElementById(`option-${index}`);
     const correct = btn.dataset.correct === 'true';
-    quizTotal++;
 
-    for (let i = 0; i < 3; i++) {
-        const b = document.getElementById(`option-${i}`);
-        b.disabled = true;
-        if (b.dataset.correct === 'true') b.classList.add('option-correct');
-        else b.classList.add('option-wrong');
-    }
-
-    if (correct) {
-        quizScore++;
-        setTimeout(() => { quizIndex++; showQuestion(); }, 800);
+    if (currentMode === 'quiz') {
+        quizTotal++;
+        if (correct) {
+            quizScore++;
+            correctCards.push(quizCards[quizIndex]);
+        } else {
+            wrongCards.push(quizCards[quizIndex]);
+        }
+        quizIndex++;
+        showQuestion();
     } else {
-        setTimeout(() => { quizIndex++; showQuestion(); }, 1200);
+        // Learning mode — highlight correct/incorrect, wait for nav buttons
+        for (let i = 0; i < 3; i++) {
+            const b = document.getElementById(`option-${i}`);
+            b.disabled = true;
+            if (b.dataset.correct === 'true') b.classList.add('option-correct');
+            else b.classList.add('option-wrong');
+        }
     }
-}
-
-async function submitResult(correct) {
-    const card = quizCards[quizIndex];
-    await fetch(`/api/decks/${currentDeck}/cards/${card.id}/result`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ correct })
-    });
-    quizIndex++;
-    showQuestion();
 }
 
 // --- Init ---

@@ -12,10 +12,9 @@
 
     <!-- Navbar -->
     <nav id="navbar">
-        <div id="nav-logo">🃏 Flashcard App</div>
+        <div id="nav-logo">Flashcard App: STUDY</div>
         <div id="nav-links">
             <button onclick="showHome()">Home</button>
-            <button id="nav-quiz-btn" class="hidden" onclick="showQuiz()">Start Quiz</button>
             <button id="nav-create-btn" onclick="openCreateDeck()">+ Create Deck</button>
         </div>
     </nav>
@@ -44,6 +43,22 @@
             <button class="back-btn" onclick="showHome()">← Back</button>
             <h1 id="deck-title"></h1>
         </div>
+
+        <!-- Mode Selection -->
+        <div id="mode-select">
+            <h2>How would you like to study?</h2>
+            <div id="mode-select-buttons">
+                <div class="mode-card" onclick="showQuiz('learning')">
+                    <h3>LEARNING</h3>
+                    <p>Iterate through cards and select answers. Gauge your understanding.</p>
+                </div>
+                <div class="mode-card" onclick="showQuiz('quiz')">
+                    <h3>QUIZ</h3>
+                    <p>Answer multiple choice questions and get a score at the end.</p>
+                </div>
+            </div>
+        </div>
+
         <div id="card-list"></div>
         <div id="add-card">
             <h3>Add a Card</h3>
@@ -57,39 +72,40 @@
     <div id="quiz-screen" class="screen hidden">
         <div id="deck-header">
             <button class="back-btn" onclick="showDeck()">← Back</button>
-            <h1>Quiz: <span id="quiz-deck-title"></span></h1>
+            <h1 id="quiz-screen-title"></h1>
         </div>
 
-        <!-- Mode Toggle -->
-        <div id="mode-toggle">
-            <button id="btn-learning" class="mode-btn active" onclick="setMode('learning')">Learning</button>
-            <button id="btn-quiz" class="mode-btn" onclick="setMode('quiz')">Quiz</button>
-        </div>
-
-        <!-- Card -->
         <div id="quiz-card">
             <div id="question-text"></div>
             <p id="flip-hint">Click card to flip</p>
             <div id="answer-text" class="hidden"></div>
 
-            <!-- Learning mode buttons -->
-            <div id="learning-buttons" class="hidden">
-                <button class="correct-btn" onclick="event.stopPropagation(); submitResult(true)">✅ Correct</button>
-                <button class="wrong-btn" onclick="event.stopPropagation(); submitResult(false)">❌ Incorrect</button>
-            </div>
-
-            <!-- Quiz mode options -->
             <div id="quiz-options" class="hidden">
                 <button class="option-btn" id="option-0" onclick="event.stopPropagation(); selectOption(0)"></button>
                 <button class="option-btn" id="option-1" onclick="event.stopPropagation(); selectOption(1)"></button>
                 <button class="option-btn" id="option-2" onclick="event.stopPropagation(); selectOption(2)"></button>
             </div>
+
+            <div id="learning-nav" class="hidden">
+                <button onclick="event.stopPropagation(); prevCard()">← Back</button>
+                <button onclick="event.stopPropagation(); nextCard()">Next →</button>
+            </div>
+
         </div>
 
-        <!-- Quiz Complete -->
         <div id="quiz-complete" class="hidden">
-            <h3>🎉 Quiz Complete!</h3>
+            <h3>Complete!</h3>
             <p id="quiz-score"></p>
+            <div id="results">
+                <div class="result-col">
+                    <h3>Correct</h3>
+                    <ul id="correct-list"></ul>
+                </div>
+                <div class="result-col">
+                    <h3>Incorrect</h3>
+                    <ul id="wrong-list"></ul>
+                </div>
+            </div>
             <button onclick="showDeck()">Back to Deck</button>
         </div>
     </div>
